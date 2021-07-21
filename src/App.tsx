@@ -7,7 +7,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1> {formula} </h1>
+      <h1 id="screen"> {formula} </h1>
       <NumberPad setFormula={setFormal} />
     </div>
   );

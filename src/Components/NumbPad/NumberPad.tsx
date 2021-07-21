@@ -80,8 +80,8 @@ export const NumberPad: React.FC<Props> = ({ setFormula }: Props) => {
       <button className="key" id="zero" onClick={() => handleClick("0")}>
         0
       </button>
-      <button className="key" id="negative" onClick={() => handleClick("-")}>
-        -/+
+      <button className="key" id="equals">
+        =
       </button>
       <button className="key" id="plus" onClick={() => handleClick("+")}>
         +

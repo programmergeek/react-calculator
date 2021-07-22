@@ -6,9 +6,15 @@ interface Props {
 }
 
 export const NumberPad: React.FC<Props> = ({ setFormula }: Props) => {
+  const symbols = /\*|\+|\/|-/;
+
   const handleClick = (input: string) => {
     setFormula((prev) => {
-      return prev + input;
+      if (prev === "0" && input === "0") return prev;
+      if (prev.length === 0 && symbols.test(input)) return "";
+      if (symbols.test(prev.charAt(prev.length - 1)) && symbols.test(input))
+        return prev;
+      else return prev + input;
     });
   };
 
